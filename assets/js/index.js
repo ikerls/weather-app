@@ -14,7 +14,7 @@ $(function () {
     } = response;
     console.log(weather[0].description);
     console.log(temp);
-    $("h1").text(Math.round(temp));
+    $("h1").text(Math.round(temp) + "°");
     $("p").text(weather[0].description);
   });
 });

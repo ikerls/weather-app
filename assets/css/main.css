@@ -246,6 +246,22 @@
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   }
 }
+.input-group input,
+.input-group button {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.input-group input:focus,
+.input-group button:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+.input-group input:active,
+.input-group button:active {
+  outline: none;
+}
+
 #princiapl {
   height: 70vh;
 }
