@@ -1,5 +1,5 @@
 // current weather
-function apiWeather(loc, lang = "es") {
+function apiWeather(loc, lang = "en") {
   return {
     async: true,
     crossDomain: true,

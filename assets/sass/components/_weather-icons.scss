@@ -1,7 +1,10 @@
-.moon {
+.icon_container {
   position: relative;
   width: 5rem;
   height: 5rem;
+}
+.moon {
+  @extend .icon_container;
 }
 .moon,
 .partly_cloudy_night__moon {
@@ -33,9 +36,6 @@
 }
 
 .partly_cloudy_night {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
   &__moon {
     position: absolute;
     width: 100%;
@@ -53,9 +53,7 @@
   }
 }
 .sunny {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
+  @extend .icon_container;
 }
 
 .sunny,
@@ -88,9 +86,7 @@
 }
 
 .cloudy {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
+  @extend .icon_container;
 }
 .cloudy,
 .partly_cloudy__cloud,
@@ -128,9 +124,8 @@
 }
 
 .partly_cloudy {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
+  @extend .icon_container;
+
   &__sun {
     position: absolute;
     width: 100%;
@@ -150,9 +145,8 @@
 
 .rainy,
 .thundery {
-  position: relative;
-  width: 6rem;
-  height: 6rem;
+  @extend .icon_container;
+
   &__cloud {
     position: absolute;
     height: 100%;

@@ -1,4 +1,5 @@
-.moon {
+.icon_container, .rainy,
+.thundery, .partly_cloudy, .cloudy, .sunny, .moon {
   position: relative;
   width: 5rem;
   height: 5rem;
@@ -31,11 +32,6 @@
   animation: fadeIn 2s linear infinite reverse, scaleDown 2s linear infinite reverse;
 }
 
-.partly_cloudy_night {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-}
 .partly_cloudy_night__moon {
   position: absolute;
   width: 100%;
@@ -50,12 +46,6 @@
   z-index: 2;
   will-change: transform;
   animation: translateUp 2s linear infinite alternate;
-}
-
-.sunny {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
 }
 
 .sunny:before,
@@ -83,12 +73,6 @@
   background-color: #f39c12;
   will-change: opacity, transform;
   animation: fadeIn 2s linear infinite reverse, scaleDown 2s linear infinite reverse;
-}
-
-.cloudy {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
 }
 
 .cloudy:before,
@@ -128,11 +112,6 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
-.partly_cloudy {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-}
 .partly_cloudy__sun {
   position: absolute;
   width: 100%;
@@ -149,12 +128,6 @@
   animation: translateUp 2s linear infinite alternate;
 }
 
-.rainy,
-.thundery {
-  position: relative;
-  width: 6rem;
-  height: 6rem;
-}
 .rainy__cloud,
 .thundery__cloud {
   position: absolute;
