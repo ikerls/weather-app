@@ -37,9 +37,20 @@ $(function () {
             case "01d":
               main_icon.append("<div class='sunny'></div>");
               break;
-
+            case "01n":
+              main_icon.append("<div class='moon'></div>");
+              break;
             //Partly cloudy
             case "02d":
+              main_icon.append("<div class='partly_cloudy_night'></div>");
+              $("<div class='partly_cloudy_night__moon'></div>").appendTo(
+                "#main_icon .partly_cloudy_night"
+              );
+              $("<div class='partly_cloudy_night__cloud'></div>").appendTo(
+                "#main_icon .partly_cloudy_night"
+              );
+              break;
+            case "02n":
               main_icon.append("<div class='partly_cloudy'></div>");
               $("<div class='partly_cloudy__sun'></div>").appendTo(
                 "#main_icon .partly_cloudy"
