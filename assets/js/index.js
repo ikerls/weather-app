@@ -48,9 +48,14 @@ $(function () {
           main_icon.empty();
         }
 
-        $.ajax(apiForecast(lat, lon)).done((response) => {
-          console.log(response);
-        });
+        $.ajax(apiForecast(lat, lon))
+          .done((response) => {
+            // TODO: deconstruct response
+            console.log(response);
+          })
+          .fail(() => {
+            alert("se ha producido un error;");
+          });
         console.log({ lon, lat });
         console.log(icon);
         // selector del icono:
