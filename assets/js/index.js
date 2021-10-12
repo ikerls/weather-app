@@ -13,6 +13,23 @@ function apiWeather(loc, lang = "en") {
     headers: {},
   };
 }
+//forecast for 7 days
+function apiForecast(lat, lon, lang = "en") {
+  return {
+    async: true,
+    crossDomain: true,
+    url:
+      "http://api.openweathermap.org/data/2.5/onecall?lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&exclude=current%2Cminutely%2Chourly%2Calerts&units=metric&lang=" +
+      lang +
+      "&appid=3c100b21bad8bdc82ba2121560f63892&=",
+    method: "GET",
+    headers: {},
+  };
+}
 
 $(function () {
   $("form").on("submit", (e) => {
@@ -21,6 +38,7 @@ $(function () {
     $.ajax(apiWeather(location))
       .done((response) => {
         const {
+          coord: { lon, lat },
           weather: [{ description, icon }],
           main: { temp },
           name,
@@ -29,6 +47,11 @@ $(function () {
         if (main_icon.children().length > 0) {
           main_icon.empty();
         }
+
+        $.ajax(apiForecast(lat, lon)).done((response) => {
+          console.log(response);
+        });
+        console.log({ lon, lat });
         console.log(icon);
         // selector del icono:
         function iconSelector(icon) {
