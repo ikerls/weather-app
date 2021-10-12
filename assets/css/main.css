@@ -1,5 +1,5 @@
 .icon_container, .rainy,
-.thundery, .partly_cloudy, .cloudy, .sunny, .moon {
+.thundery, .partly_cloudy_night, .partly_cloudy, .cloudy, .sunny, .moon {
   position: relative;
   width: 5rem;
   height: 5rem;
@@ -30,22 +30,6 @@
   background-color: #7f8c8d;
   will-change: opacity, transform;
   animation: fadeIn 2s linear infinite reverse, scaleDown 2s linear infinite reverse;
-}
-
-.partly_cloudy_night__moon {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.partly_cloudy_night__cloud {
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  top: 40%;
-  z-index: 2;
-  will-change: transform;
-  animation: translateUp 2s linear infinite alternate;
 }
 
 .sunny:before,
@@ -119,6 +103,22 @@
   z-index: 1;
 }
 .partly_cloudy__cloud {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 40%;
+  z-index: 2;
+  will-change: transform;
+  animation: translateUp 2s linear infinite alternate;
+}
+
+.partly_cloudy_night__moon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.partly_cloudy_night__cloud {
   position: absolute;
   width: 60%;
   height: 60%;

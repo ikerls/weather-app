@@ -35,23 +35,6 @@
   }
 }
 
-.partly_cloudy_night {
-  &__moon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  &__cloud {
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    top: 40%;
-    z-index: 2;
-    will-change: transform;
-    animation: translateUp 2s linear infinite alternate;
-  }
-}
 .sunny {
   @extend .icon_container;
 }
@@ -127,6 +110,24 @@
   @extend .icon_container;
 
   &__sun {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__cloud {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 40%;
+    z-index: 2;
+    will-change: transform;
+    animation: translateUp 2s linear infinite alternate;
+  }
+}
+.partly_cloudy_night {
+  @extend .icon_container;
+  &__moon {
     position: absolute;
     width: 100%;
     height: 100%;
