@@ -1,3 +1,57 @@
+.moon {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+.moon,
+.partly_cloudy_night__moon {
+  &:before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    right: 10%;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: #95a5a6;
+    background-image: radial-gradient(#dfe7e7, #9ba4a5);
+    box-shadow: 0 0 25px #95a5a6;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #7f8c8d;
+    will-change: opacity, transform;
+    animation: fadeIn 2s linear infinite reverse,
+      scaleDown 2s linear infinite reverse;
+  }
+}
+
+.partly_cloudy_night {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  &__moon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__cloud {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 40%;
+    z-index: 2;
+    will-change: transform;
+    animation: translateUp 2s linear infinite alternate;
+  }
+}
 .sunny {
   position: relative;
   width: 5rem;
@@ -41,7 +95,8 @@
 .cloudy,
 .partly_cloudy__cloud,
 .rainy__cloud,
-.thundery__cloud {
+.thundery__cloud,
+.partly_cloudy_night__cloud {
   &:before {
     content: "";
     position: absolute;
