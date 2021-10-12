@@ -27,6 +27,7 @@ $(function () {
       if (main_icon.children().length > 0) {
         main_icon.empty();
       }
+      console.log(icon);
       // selector del icono:
       switch (icon) {
         //Sunny
@@ -44,15 +45,30 @@ $(function () {
           );
           break;
         //Cloudy
-        case "03d" || "03n" || "04d" || "04n":
+        case "03d":
+        case "03n":
+        case "04d":
+        case "04n":
+          main_icon.append("<div class='cloudy'></div>");
           break;
         //Rainy
-        case "09d" || "09n" || "10d" || "10n":
+        case "09d":
+        case "09n":
+        case "10d":
+        case "10n":
+          main_icon.append("<div class='rainy'></div>");
+          $("<div class='rainy__cloud'></div>").appendTo("#main_icon .rainy");
+          $("<div class='rainy__rain'></div>").appendTo("#main_icon .rainy");
           break;
         //Thundery
         case "11d" || "11n":
-          break;
-        default:
+          main_icon.append("<div class='thundery'></div>");
+          $("<div class='thundery__cloud'></div>").appendTo(
+            "#main_icon .thundery"
+          );
+          $("<div class='thundery__rain'></div>").appendTo(
+            "#main_icon .thundery"
+          );
           break;
       }
 
