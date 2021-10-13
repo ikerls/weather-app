@@ -30,6 +30,7 @@ function apiForecast(lat, lon, lang = "en") {
 		headers: {},
 	};
 }
+
 // icon selector
 function iconSelector(location, icon) {
 	switch (icon) {
@@ -109,14 +110,20 @@ $(function () {
 
 				$.ajax(apiForecast(lat, lon))
 					.done((response) => {
-						const { daily } = response;
-						console.log(daily);
+						const { timezone_offset: offset, daily } = response;
+						console.log(offset);
 						for (const {
 							dt,
 							temp: { day },
 							weather: [{ description, icon }],
 						} of daily) {
+							console.log(
+								new Date(dt * 1000).toLocaleDateString()
+							);
 							console.log({ dt, description, icon, day });
+							// TODO: creacion de las tarjetas e implemtar sus datos
+							const rootCards = $(".card_container");
+							let card = $(selector).append(content);
 						}
 					})
 					.fail(() => {
@@ -124,8 +131,8 @@ $(function () {
 					});
 				console.log({ lon, lat });
 				console.log(icon);
-				// selector del icono:
 
+				// selector del icono:
 				iconSelector(main_icon, icon);
 
 				$("h2").text(name);
