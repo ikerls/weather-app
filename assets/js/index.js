@@ -110,13 +110,14 @@ $(function () {
 
 				$.ajax(apiForecast(lat, lon))
 					.done((response) => {
-						const { timezone_offset: offset, daily } = response;
+						const { timezone_offset: offset, daily: tempProximas } =
+							response;
 						console.log(offset);
 						for (const {
 							dt,
 							temp: { day },
 							weather: [{ description, icon }],
-						} of daily) {
+						} of tempProximas) {
 							console.log(
 								new Date(dt * 1000).toLocaleDateString()
 							);
