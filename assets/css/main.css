@@ -22,13 +22,14 @@ h1 {
 h2, .temp_card_text,
 p,
 h3 {
-  font-family: "hk-grotesk", sans-serif;
+  font-family: "OpenSans", sans-serif;
   color: white;
   text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .temp_card_text {
   font-size: 1.1rem;
+  font-family: "OpenSans";
 }
 
 #princiapl {
@@ -332,6 +333,7 @@ body {
 .input-group input,
 .input-group button {
   background-color: #ffffff;
+  -webkit-border-radius: 20px;
   border-radius: 20px;
 }
 .input-group input:focus,
@@ -368,61 +370,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background-clip: padding-box;
-}
-body {
-  z-index: -1;
-}
-
-.switch {
-  border: 3px solid #1a1a1a;
-  display: inline-block;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  transition: background 600ms ease, color 600ms ease;
-}
-
-input[type=radio].toggle {
-  display: none;
-}
-input[type=radio].toggle + label {
-  cursor: pointer;
-  min-width: 60px;
-}
-input[type=radio].toggle + label:hover {
-  background: none;
-  color: #1a1a1a;
-}
-input[type=radio].toggle + label:after {
-  background: #1a1a1a;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
-  width: 100%;
-  z-index: -1;
-}
-input[type=radio].toggle.toggle-left + label {
-  border-right: 0;
-}
-input[type=radio].toggle.toggle-left + label:after {
-  left: 100%;
-}
-input[type=radio].toggle.toggle-right + label {
-  margin-left: -5px;
-}
-input[type=radio].toggle.toggle-right + label:after {
-  left: -100%;
-}
-input[type=radio].toggle:checked + label {
-  cursor: default;
-  color: #fff;
-  transition: color 200ms;
-}
-input[type=radio].toggle:checked + label:after {
-  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

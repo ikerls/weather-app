@@ -15,11 +15,12 @@ h1 {
 h2,
 p,
 h3 {
-  font-family: "hk-grotesk", sans-serif;
+  font-family: "OpenSans", sans-serif;
   color: white;
   text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 .temp_card_text {
   @extend h2;
   font-size: $cardText;
+  font-family: "OpenSans";
 }

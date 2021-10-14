@@ -1,7 +1,7 @@
 @mixin border-radius($r) {
   -webkit-border-radius: $r;
   border-radius: $r;
-  background-clip: padding-box;
+  //background-clip: padding-box;
 }
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {

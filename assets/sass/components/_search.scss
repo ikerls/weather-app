@@ -2,7 +2,7 @@
   & input,
   button {
     background-color: $primary;
-    border-radius: 20px;
+    @include border-radius(20px);
 
     &:focus {
       box-shadow: none;
