@@ -1,0 +1,25 @@
+@include font-face(hk-grotesk, "../fonts/hk-grotesk.regular");
+@include font-face(OpenSans, "../fonts/OpenSans-Regular");
+h1 {
+  font-family: "hk-grotesk", sans-serif;
+  color: white;
+  font-size: $primaryText;
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+h2,
+p,
+h3 {
+  font-family: "hk-grotesk", sans-serif;
+  color: white;
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.temp_card_text {
+  @extend h2;
+  font-size: $cardText;
+}

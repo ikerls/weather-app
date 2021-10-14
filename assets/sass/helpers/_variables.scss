@@ -1,0 +1,16 @@
+$breakpoints: (
+  "small": (
+    min-width: 767px,
+  ),
+  "medium": (
+    min-width: 992px,
+  ),
+  "large": (
+    min-width: 1200px,
+  ),
+) !default;
+$primaryText: 8em;
+
+$cardText: 1.1rem;
+$primary: #ffffff;
+$text: #000000;

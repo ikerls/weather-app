@@ -1,0 +1,16 @@
+#princiapl {
+  height: 70vh;
+}
+body {
+  background-image: linear-gradient(
+    rgba(71, 191, 223, 1),
+    rgba(74, 145, 255, 1)
+  );
+}
+#temps {
+  height: 30vh;
+}
+#tiempo {
+  @include cover-background;
+  padding: 1rem;
+}

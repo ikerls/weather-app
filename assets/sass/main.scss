@@ -1,21 +1,8 @@
+@import "helpers/variables";
 @import "helpers/mixins";
+@import "base/typography";
+@import "base/layout";
 @import "components/weather-icons";
 @import "components/search";
 @import "components/cards";
 @import "components/switch";
-#princiapl {
-  height: 70vh;
-}
-#img {
-  //background-image: url("../imgs/Rectangle\ 2.png");
-  background-color: rgb(133, 78, 78);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#temps {
-  height: 30vh;
-}
-h1 {
-  font-size: 8em;
-}
