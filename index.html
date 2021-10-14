@@ -16,7 +16,7 @@
   <body>
     <!--  seccion principal-->
     <header class="container" id="img">
-      <nav class="navbar fixed-top">
+      <nav class="navbar">
         <div class="flex-row mx-auto d-flex">
           <form class="d-flex" name="busquedaCiudad">
             <div class="input-group">
@@ -33,12 +33,7 @@
             </div>
           </form>
         </div>
-      </nav>
-      <section
-        class="container d-flex flex-column justify-content-center"
-        id="princiapl"
-      >
-        <div class="mt-5 d-flex justify-content-end">
+        <div class="d-flex">
           <div class="dropdown">
             <button
               class="btn dropdown-toggle"
@@ -46,6 +41,7 @@
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              style="color: white"
             >
               <i class="bi bi-globe"></i>
             </button>
@@ -74,6 +70,11 @@
             </ul>
           </div>
         </div>
+      </nav>
+      <section
+        class="container d-flex flex-column justify-content-center"
+        id="princiapl"
+      >
         <div
           class="mt-5  d-flex flex-column justify-content-center align-items-center"
           id="tiempo"

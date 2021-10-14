@@ -1,11 +1,16 @@
 #princiapl {
-  height: 70vh;
+  height: 60vh;
+}
+nav {
+  height: 10vh;
+  margin-top: 10%;
 }
 body {
   background-image: linear-gradient(
     rgba(71, 191, 223, 1),
     rgba(74, 145, 255, 1)
   );
+  overflow: hidden;
 }
 #temps {
   height: 30vh;
