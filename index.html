@@ -1,142 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
-    <!--  seccion principal-->
-    <div class="container" id="img">
-      <nav class="navbar fixed-top">
-        <div class="d-flex flex-row mx-auto">
-          <form class="d-flex">
-            <div class="input-group">
-              <input
-                class="form-control input-sm"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
 
-              <button class="btn" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </nav>
-      <!-- Rounded switch -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Title</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
 
-      <section
-        class="container d-flex flex-column justify-content-center"
-        id="princiapl"
-      >
-        <div class="d-flex justify-content-end">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-globe"></i>
+<body>
+  <!--  seccion principal-->
+  <div class="container" id="img">
+    <nav class="navbar fixed-top">
+      <div class="d-flex flex-row mx-auto">
+        <form class="d-flex" name="busquedaCiudad">
+          <div class="input-group">
+            <input class="form-control input-sm" type="search" placeholder="Buscar" aria-label="Search" />
+
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-sm-start"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li class="">
-                <button class="dropdown-item" href="#" id="es">
-                  <img
-                    src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
-                    alt="bandera España"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-              <li class="">
-                <button class="dropdown-item" href="#" id="en">
-                  <img
-                    src="https://www.banderas-mundo.es/data/flags/big/gb.png"
-                    alt="bandera uk"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-            </ul>
           </div>
+        </form>
+      </div>
+    </nav>
+    <!-- Rounded switch -->
+
+    <section class="container d-flex flex-column justify-content-center" id="princiapl">
+      <div class="d-flex justify-content-end">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-globe"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-sm-start" aria-labelledby="dropdownMenuButton1">
+            <li class="">
+              <button class="dropdown-item" href="#" id="es">
+                <img src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
+                  alt="bandera España" class="w-25" />
+              </button>
+            </li>
+            <li class="">
+              <button class="dropdown-item" href="#" id="en">
+                <img src="https://www.banderas-mundo.es/data/flags/big/gb.png" alt="bandera uk" class="w-25" />
+              </button>
+            </li>
+          </ul>
         </div>
-        <div
-          class="
+      </div>
+      <div class="
             mt-5
             d-flex
             flex-column
             justify-content-center
             align-items-center
-          "
-        >
-          <h2></h2>
-          <!-- icon -->
-          <div id="main_icon">
-            <div class="partly_cloudy_night">
-              <div class="partly_cloudy_night__moon"></div>
-              <div class="partly_cloudy_night__cloud"></div>
-            </div>
-          </div>
-          <div>
-            <h1>22</h1>
-          </div>
-          <div>
-            <p>PArcialmente nuboso</p>
+          ">
+        <h2></h2>
+        <!-- icon -->
+        <div id="main_icon">
+          <div class="partly_cloudy_night">
+            <div class="partly_cloudy_night__moon"></div>
+            <div class="partly_cloudy_night__cloud"></div>
           </div>
         </div>
-      </section>
-    </div>
-    <!-- tarjetas de los proximos dias -->
-    <section class="container" id="temps">
-      <div>
-        <p>Titulo</p>
-      </div>
-      <!-- Cards container -->
-      <div class="card_container">
-        <div class="temp_card">
-          <div class="temp_card_text">hora</div>
-          <div class="temp_card_icon">
-            <div class="cloudy"></div>
-          </div>
-          <div>temp</div>
+        <div>
+          <h1>22</h1>
         </div>
-        <div class="temp_card">
-          <div>hora</div>
-          <div class="temp_card_icon">
-            <div class="cloudy"></div>
-          </div>
-          <div>temp</div>
-        </div>
-        <div class="temp_card">
-          <div>hora</div>
-          <div class="temp_card_icon">
-            <div class="cloudy"></div>
-          </div>
-          <div>temp</div>
+        <div>
+          <h3>PArcialmente nuboso</h3>
         </div>
       </div>
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>
-  </body>
+  </div>
+  <!-- tarjetas de los proximos dias -->
+  <section class="container" id="temps">
+    <div>
+      <p>Prediccion de los proximos dias: </p>
+    </div>
+    <!-- Cards container -->
+    <div class="card_container">
+      <div class="temp_card">
+        <div class="temp_card_text">hora</div>
+        <div class="temp_card_icon">
+          <div class="cloudy"></div>
+        </div>
+        <div>temp</div>
+      </div>
+      <div class="temp_card">
+        <div>hora</div>
+        <div class="temp_card_icon">
+          <div class="cloudy"></div>
+        </div>
+        <div>temp</div>
+      </div>
+      <div class="temp_card">
+        <div>hora</div>
+        <div class="temp_card_icon">
+          <div class="cloudy"></div>
+        </div>
+        <div>temp</div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
 </html>
