@@ -1,0 +1,17 @@
+@import "../base/color";
+.input-group {
+  & input,
+  button {
+    background-color: $primary;
+    border-radius: 20px;
+
+    &:focus {
+      box-shadow: none;
+      border: none;
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
+  }
+}
