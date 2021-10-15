@@ -2,7 +2,7 @@
 @include font-face(OpenSans, "../fonts/OpenSans-Regular");
 h1 {
   font-family: "hk-grotesk", sans-serif;
-  color: white;
+  color: $primary;
   font-size: $primaryText;
   text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
     0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
@@ -17,10 +17,10 @@ p,
 h3 {
   font-family: "OpenSans", sans-serif;
   color: white;
+  font-size: $secondaryText;
   text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 .temp_card_text {
   @extend h2;
   font-size: $cardText;
-  font-family: "OpenSans";
 }

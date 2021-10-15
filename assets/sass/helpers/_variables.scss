@@ -1,3 +1,8 @@
+$primaryText: 8em;
+$secondaryText: 1.6em;
+$cardText: 1.1rem;
+$cardMargin: 0.5rem;
+$primary: #ffffff;
 $breakpoints: (
   "small": (
     min-width: 767px,
@@ -9,8 +14,3 @@ $breakpoints: (
     min-width: 1200px,
   ),
 ) !default;
-$primaryText: 8em;
-
-$cardText: 1.1rem;
-$primary: #ffffff;
-$text: #000000;

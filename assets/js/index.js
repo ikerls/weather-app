@@ -1,13 +1,3 @@
-function clear(root1, root2) {
-  // limpieza de hijos generados dinamicamente
-  if (root1.children().length > 0) {
-    root1.empty();
-  }
-  if (root2.children().length > 0) {
-    root2.empty();
-  }
-}
-// TODO: AÑADIR LOS ICONOS QUE FALTAN
 // icon selector
 function iconSelector(location, icon) {
   switch (icon) {
@@ -36,13 +26,6 @@ function iconSelector(location, icon) {
         location.children()
       );
       break;
-    //Cloudy
-    case "03d":
-    case "03n":
-    case "04d":
-    case "04n":
-      location.append("<div class='cloudy'></div>");
-      break;
     //Rainy
     case "09d":
     case "09n":
@@ -59,26 +42,23 @@ function iconSelector(location, icon) {
       $("<div class='thundery__cloud'></div>").appendTo(location.children());
       $("<div class='thundery__rain'></div>").appendTo(location.children());
       break;
+    default:
+      //Cloudy
+      location.append("<div class='cloudy'></div>");
   }
 }
 function cambioIdioma(ingles) {
-  let textoProximosDias = $("#temps p");
   let busqueda = $("input[type='search']");
   if (ingles) {
-    textoProximosDias.text("Forecast for the next days:");
     busqueda.attr("placeholder", "Search");
   } else {
-    textoProximosDias.text("Prediccion de los proximos dias:");
     busqueda.attr("placeholder", "Busqueda");
   }
-  // if (busqueda.val() != "") {
-  // 	$("form").submit();
-  // }
 }
 
 $(function () {
   let enIngles = true;
-  const main_icon = $("#main_icon");
+  const princiapl = $("header section");
   const rootCards = $(".card_container");
   $("#es").on("click", (e) => {
     enIngles = false;
@@ -90,8 +70,15 @@ $(function () {
   });
   $("form").on("submit", (e) => {
     e.preventDefault();
+
+    // limpieza
+    if (princiapl.children().length > 0) {
+      princiapl.empty();
+    }
+    if (rootCards.children().length > 0) {
+      rootCards.empty();
+    }
     let location = $("input").val();
-    clear(main_icon, rootCards);
 
     const apiWeather = {
       async: true,
@@ -114,6 +101,15 @@ $(function () {
           name,
         } = response;
 
+        $("header section").append(
+          "<div class='mt-5 d-flex flex-column justify-content-center align-items-center'id='tiempo'></div>"
+        );
+        $("<h2>" + name + "</h2>").appendTo("#tiempo");
+        $("<div id='main_icon'></div>").appendTo("#tiempo");
+        $("<h1>" + Math.round(temp) + "°" + "</h1>").appendTo("#tiempo");
+        $("<h3>" + description + "</h3>").appendTo("#tiempo");
+        iconSelector($("#main_icon"), icon);
+
         const apiForecast = {
           async: true,
           crossDomain: true,
@@ -132,12 +128,11 @@ $(function () {
         $.ajax(apiForecast)
           .done((response) => {
             const { timezone_offset: offset, daily: tempProximas } = response;
-            console.log(offset);
             let cnt = 0;
             for (const {
               dt,
               temp: { day: temp },
-              weather: [{ description, icon }],
+              weather: [{ icon }],
             } of tempProximas) {
               cnt++;
               if (cnt == 1) {
@@ -148,9 +143,15 @@ $(function () {
               rootCards.append("<div class='temp_card'></div>");
               const cardMain = $(".temp_card").last();
               $("<div class='temp_card_text'></div>").appendTo(cardMain);
-              $(".temp_card_text")
-                .last()
-                .text(new Date(dt * 1000).toLocaleDateString());
+              let dia = new Date(dt * 1000)
+                .toLocaleDateString(enIngles ? "en-US" : "es-ES", {
+                  weekday: "long",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+                .split(",");
+              $(".temp_card_text").last().text(dia[0]);
               $("<div class='temp_card_icon'></div>").appendTo(cardMain);
               iconSelector($(".temp_card_icon").last(), icon);
               $("<div class='temp_card_text'></div>").appendTo(cardMain);
@@ -162,12 +163,6 @@ $(function () {
           .fail(() => {
             alert("se ha producido un error;");
           });
-
-        iconSelector(main_icon, icon);
-
-        $("h2").text(name);
-        $("h1").text(Math.round(temp) + "°");
-        $("h3").text(description);
       })
       .fail(() => {
         // error en la peticion

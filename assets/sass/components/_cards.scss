@@ -15,8 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: $cardMargin;
+  margin-right: $cardMargin;
   padding: 20px;
   @include cover-background;
   @include border-radius(10px);

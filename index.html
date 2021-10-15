@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Weather app</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link
@@ -23,10 +23,9 @@
               <input
                 class="form-control input-sm"
                 type="search"
-                placeholder="Buscar"
+                placeholder="Search"
                 aria-label="Search"
               />
-
               <button class="btn" type="submit">
                 <i class="bi bi-search"></i>
               </button>
@@ -50,7 +49,7 @@
               aria-labelledby="dropdownMenuButton1"
             >
               <li class="">
-                <button class="dropdown-item" href="#" id="es">
+                <button class="dropdown-item" id="es">
                   <img
                     src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
                     alt="bandera España"
@@ -59,7 +58,7 @@
                 </button>
               </li>
               <li class="">
-                <button class="dropdown-item" href="#" id="en">
+                <button class="dropdown-item" id="en">
                   <img
                     src="https://www.banderas-mundo.es/data/flags/big/gb.png"
                     alt="bandera uk"
@@ -74,37 +73,15 @@
       <section
         class="container d-flex flex-column justify-content-center"
         id="princiapl"
-      >
-        <div
-          class="mt-5  d-flex flex-column justify-content-center align-items-center"
-          id="tiempo"
-        >
-          <h2></h2>
-          <!-- icon -->
-          <div id="main_icon"></div>
-          <div>
-            <h1></h1>
-          </div>
-          <div>
-            <h3></h3>
-          </div>
-        </div>
-      </section>
+      ></section>
     </header>
     <!-- tarjetas de los proximos dias -->
     <section class="container" id="temps">
-      <div>
-        <p></p>
-      </div>
       <!-- Cards container -->
       <div class="card_container"></div>
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
