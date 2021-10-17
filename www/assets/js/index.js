@@ -2,14 +2,14 @@
 function iconSelector(location, icon) {
   switch (icon) {
     //Sunny
-    case "01dd":
+    case "01d":
       location.append("<div class='sunny'></div>");
       break;
     case "01n":
       location.append("<div class='moon'></div>");
       break;
     //Partly cloudy
-    case "02dn":
+    case "02n":
       location.append("<div class='partly_cloudy_night'></div>");
 
       $("<div class='partly_cloudy_night__moon'></div>").appendTo(
@@ -19,7 +19,7 @@ function iconSelector(location, icon) {
         location.children()
       );
       break;
-    case "02wd":
+    case "02d":
       location.append("<div class='partly_cloudy'></div>");
       $("<div class='partly_cloudy__sun'></div>").appendTo(location.children());
       $("<div class='partly_cloudy__cloud'></div>").appendTo(
@@ -36,7 +36,7 @@ function iconSelector(location, icon) {
       $("<div class='rainy__rain'></div>").appendTo(location.children());
       break;
     //Thundery
-    case "02n":
+    case "11d":
     case "11n":
       location.append("<div class='thundery'></div>");
       $("<div class='thundery__cloud'></div>").appendTo(location.children());
