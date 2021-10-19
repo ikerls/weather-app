@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather app</title>
@@ -11,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 </head>
 
-<body>
+<body id="deviceready">
   <!--  seccion principal-->
   <header class="container" id="img">
     <nav class="navbar">
@@ -47,7 +50,7 @@
         </div>
       </div>
       <div>
-        <button class="btn btn-light" id="location">Loc</button>
+        <button class="btn btn-dark" id="location">Hol</button>
       </div>
     </nav>
     <section class="container d-flex flex-column justify-content-center" id="princiapl"></section>
@@ -57,6 +60,7 @@
     <!-- Cards container -->
     <div class="card_container"></div>
   </section>
+  <script src="cordova.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/index.js"></script>
