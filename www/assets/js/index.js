@@ -78,6 +78,15 @@ $(function () {
 		enIngles = true;
 		cambioIdioma(enIngles);
 	});
+	$("#location").on("click", (e) => {
+		let onSuccess = (position) => {
+			alert(" " + position.coords.latitude + position.coords.longitude);
+		};
+		let errrT = () => {
+			alert("Error");
+		};
+		navigator.geolocation.getCurrentPosition(onSuccess, errrT);
+	});
 	$("form").on("submit", (e) => {
 		e.preventDefault();
 

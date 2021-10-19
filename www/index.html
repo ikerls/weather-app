@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather app</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-  </head>
 
-  <body>
-    <!--  seccion principal-->
-    <header class="container" id="img">
-      <nav class="navbar">
-        <div class="flex-row mx-auto d-flex">
-          <form class="d-flex" name="busquedaCiudad">
-            <div class="input-group">
-              <input
-                class="form-control input-sm"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="d-flex">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="color: white"
-            >
-              <i class="bi bi-globe"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather app</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!--  seccion principal-->
+  <header class="container" id="img">
+    <nav class="navbar">
+      <div class="flex-row mx-auto d-flex">
+        <form class="d-flex" name="busquedaCiudad">
+          <div class="input-group">
+            <input class="form-control input-sm" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-sm-start"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li class="">
-                <button class="dropdown-item" id="es">
-                  <img
-                    src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
-                    alt="bandera España"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-              <li class="">
-                <button class="dropdown-item" id="en">
-                  <img
-                    src="https://www.banderas-mundo.es/data/flags/big/gb.png"
-                    alt="bandera uk"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-            </ul>
           </div>
+        </form>
+      </div>
+      <div class="d-flex">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false" style="color: white">
+            <i class="bi bi-globe"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-sm-start" aria-labelledby="dropdownMenuButton1">
+            <li class="">
+              <button class="dropdown-item" id="es">
+                <img src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
+                  alt="bandera España" class="w-25" />
+              </button>
+            </li>
+            <li class="">
+              <button class="dropdown-item" id="en">
+                <img src="https://www.banderas-mundo.es/data/flags/big/gb.png" alt="bandera uk" class="w-25" />
+              </button>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <section
-        class="container d-flex flex-column justify-content-center"
-        id="princiapl"
-      ></section>
-    </header>
-    <!-- tarjetas de los proximos dias -->
-    <section class="container" id="temps">
-      <!-- Cards container -->
-      <div class="card_container"></div>
-    </section>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>
-  </body>
+      </div>
+      <div>
+        <button class="btn btn-light" id="location">Loc</button>
+      </div>
+    </nav>
+    <section class="container d-flex flex-column justify-content-center" id="princiapl"></section>
+  </header>
+  <!-- tarjetas de los proximos dias -->
+  <section class="container" id="temps">
+    <!-- Cards container -->
+    <div class="card_container"></div>
+  </section>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
 </html>
