@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./www/assets/img/Samsung%20Galaxy%20Note20%205G.png" alt="icono" width="200">
+  <img src="./www/img/Samsung%20Galaxy%20Note20%205G.png" alt="icono" width="200">
   <br>
   Weather App
   <br>
