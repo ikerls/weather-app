@@ -2,7 +2,7 @@
   "name": "org.cuatrovientos.weather",
   "displayName": "WeatherClase",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "Una app minimalista del tiempo.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Apache Cordova Team",
+  "author": "iker larrea",
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^10.1.1",
