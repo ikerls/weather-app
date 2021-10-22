@@ -4,84 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather app</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
   </head>
-
+  <style>
+    .boton {
+      width: 200px;
+      box-shadow: 0 20px 30px -6px rgba(30, 161, 255, 0.5);
+      background-image: linear-gradient(135deg, #abdcff 0%, #0396ff 100%);
+      border-radius: 50px;
+      outline: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .boton:hover {
+      color: white;
+    }
+  </style>
   <body>
-    <!--  seccion principal-->
-    <header class="container" id="img">
-      <nav class="navbar">
-        <div class="flex-row mx-auto d-flex">
-          <form class="d-flex" name="busquedaCiudad">
-            <div class="input-group">
-              <input
-                class="form-control input-sm"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
+    <section
+      class="banner bg-1 min-vh-100 d-flex align-items-center"
+      style="background-image: linear-gradient(#f5f7fa, #c3cfe2)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 align-self-center">
+            <div class="content-block">
+              <h1 class="display-1">Weather App</h1>
+              <h5>Informate del tiempo sin distracciones</h5>
+              <div class="">
+                <ul class="list-inline">
+                  <li class="list-inline-item mb-4">
+                    <a href="#" class="btn boton"
+                      ><i class="bi bi-phone-fill"></i>
+                      <div>APK</div>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn boton"
+                      ><i class="bi bi-github"></i>
+                      <div>GitHub</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </form>
-        </div>
-        <div class="d-flex">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="color: white"
-            >
-              <i class="bi bi-globe"></i>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-sm-start"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li class="">
-                <button class="dropdown-item" id="es">
-                  <img
-                    src="https://www.francobordo.com/images/productos/bandera-espana-20-x-30-cm-1-8378.jpg"
-                    alt="bandera España"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-              <li class="">
-                <button class="dropdown-item" id="en">
-                  <img
-                    src="https://www.banderas-mundo.es/data/flags/big/gb.png"
-                    alt="bandera uk"
-                    class="w-25"
-                  />
-                </button>
-              </li>
-            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="">
+              <img
+                class="img-fluid"
+                src="./www/assets/img/Samsung Galaxy Note20 5G.png"
+                alt="banner"
+              />
+            </div>
           </div>
         </div>
-      </nav>
-      <section
-        class="container d-flex flex-column justify-content-center"
-        id="princiapl"
-      ></section>
-    </header>
-    <!-- tarjetas de los proximos dias -->
-    <section class="container" id="temps">
-      <!-- Cards container -->
-      <div class="card_container"></div>
+      </div>
     </section>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
