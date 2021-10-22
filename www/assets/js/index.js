@@ -148,10 +148,6 @@ function onDeviceReady() {
 				alert("se ha producido un error;");
 			});
 	}
-	// document.addEventListener("deviceready", onDeviceReady, false);
-	// function onDeviceReady() {
-	// 	alert("f");
-	// }
 
 	$(function () {
 		let enIngles = true;
